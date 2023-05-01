@@ -1,3 +1,33 @@
+# Setup (ConCon)  
+git clone git@github.com:Constituent-Connection/CC-Auto-GPT.git  
+git remote add upstream https://github.com/Significant-Gravitas/Auto-GPT.git  
+git fetch upstream  
+git checkout cc_stable
+
+Setup your virtual environment using Python 3.11.3  
+Deactivate any current venvs:  
+`deactivate`  
+Download and install the latest version of Python from https://www.python.org/downloads/  
+Either symbolically link the new Python or create an alias in your bash: e.g.  
+`alias python='/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11'`  
+Reload your shell e.g.  
+`source ~/.zshrc`  
+Check your python version i.e.  
+`python --version`  
+Navigate to the root project folder and create a virtual environment:  
+`python -m venv autogptvenv`  
+Make a nice alias for activating your venv e.g.  
+`alias autogpt_va='source ~/FOLDER/FOLDER/CC-Auto-GPT/autogptvenv/bin/activate'`  
+Reload shell, activate your venv  
+Install requirements.txt:
+`pip install -r requirements.txt`
+Configure your .env file:  
+Copy the .env.template into a new .env file  
+Login to <a href='https://www.pinecone.io/'>Pinecone</a> and copy the PINECONE_API_KEY and PINECONE_ENV - Pinecone environment (region) (Example: us-west-2) into the .env.template
+Login to OpenAI and copy the API Key into the .env  
+Continue following setup instructions as per below  
+
+
 # Auto-GPT: An Autonomous GPT-4 Experiment
 [![Unit Tests](https://img.shields.io/github/actions/workflow/status/Significant-Gravitas/Auto-GPT/ci.yml?label=unit%20tests)](https://github.com/Significant-Gravitas/Auto-GPT/actions/workflows/ci.yml)
 [![Discord Follow](https://dcbadge.vercel.app/api/server/autogpt?style=flat)](https://discord.gg/autogpt)

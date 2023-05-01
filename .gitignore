@@ -133,6 +133,8 @@ env/
 venv*/
 ENV/
 env.bak/
+.autogptvenv
+autogptenv/
 
 # Spyder project settings
 .spyderproject
